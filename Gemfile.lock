@@ -1,0 +1,41 @@
+GEM
+  specs:
+    binding_of_caller (1.0.0)
+      debug_inspector (>= 0.0.1)
+    debug_inspector (1.1.0)
+    gastly (1.1.0)
+      mini_magick (~> 4.2)
+      phantomjs (~> 2.1.1)
+    mini_magick (4.11.0)
+    os (1.1.4)
+    phantomjs (2.1.1.0)
+    regexp_parser (2.7.0)
+    rexml (3.2.5)
+    rubyzip (2.3.2)
+    selenium-webdriver (4.8.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
+    watir (7.2.2)
+      regexp_parser (>= 1.2, < 3)
+      selenium-webdriver (~> 4.2)
+    watir-screenshot-stitch (0.8.0)
+      binding_of_caller (~> 1.0)
+      mini_magick (~> 4.11)
+      os (~> 1.1)
+      rubyzip (~> 2.3)
+      watir (~> 7.1)
+    websocket (1.2.9)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  gastly (~> 1.1)
+  mini_magick (~> 4.10, >= 4.10.1)
+  phantomjs (~> 2.1, >= 2.1.1.0)
+  selenium-webdriver (~> 4.8)
+  watir-screenshot-stitch (~> 0.8.0)
+
+BUNDLED WITH
+   2.3.7
