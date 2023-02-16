@@ -14,13 +14,16 @@ puts "Total: #{urls.size}"
 done = EduList.new(PREFIX+'done.log').get rescue []
 urls = urls - done
 puts "Will be processed: #{urls.size}"
+
+Watir.default_timeout = 320
 workers = (POOL_SIZE).times.map do
   Thread.new do
     while url = urls.pop()
       begin
         b = Watir::Browser.new :firefox#, options: options
         b.driver.manage.window.maximize
-        b.goto url
+        b.driver.manage.timeouts.page_load=180
+        b.goto url #url.sub('https','http')
         path = PREFIX + "#{url.sanitize_filename}.png"
         opts = {}#{ :page_height_limit => 10000 }
         b.screenshot.save_stitch(path, opts)
